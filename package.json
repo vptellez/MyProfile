@@ -1,6 +1,6 @@
 {
-  "name": "MyProfile",
-  "homepage": "https://vptellez.github.io/",
+  "name": "My Profile",
+  "homepage": "https://vptellez.github.io/MyProfile",
   "description": "",
   "main": "src/index.js",
   "version": "0.1.0",

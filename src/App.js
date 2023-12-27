@@ -1,23 +1,22 @@
-import React from 'react';
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./routes/Navbar";
-import Home from "./routes/Home";
-import About from './routes/About';
-import NoPage from "./routes/NoPage";
-
 import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import routes from "./routes"
+import Layout from "./components/Layout"
+import NoPage from "./pages/NoPage";
 
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      element: <Layout />,
+      errorElement: <NoPage />,
+      children: routes
+    }
+  ])
+
   return (
-    <>
-      <Navbar />
-      <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<NoPage />} />
-      </Routes>
-    </>
+    <RouterProvider router={router} />
   );
 }
 

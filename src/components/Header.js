@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import "../styles/Header.css"
 import PathConstants from "../routes/pathConstants";
+import "../styles/Header.css"
 
-export default function Header() {
+const Header = () => {  
     return (
         <header>
             <div className="header-div">
@@ -18,3 +18,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header;

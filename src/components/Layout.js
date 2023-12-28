@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom"
-import "../styles/Layout.css"
 import Header from "./Header"
 import Footer from "./Footer"
 import Loader from "./Loader"
 import {Suspense} from "react"
+import "../styles/Layout.css"
 
-export default function Layout() {
+const Layout = () => {
     return (
-        <>
+        <div>
             <Header />
             <main>  
                 <Suspense fallback={<Loader />}>
@@ -15,6 +15,8 @@ export default function Layout() {
                 </Suspense>              
             </main>
             <Footer />
-        </>
+        </div>
     )
 }
+
+export default Layout;

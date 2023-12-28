@@ -1,7 +1,7 @@
-import "../styles/Page404.css"
 import { Link } from "react-router-dom"
+import "../styles/Page404.css"
 
-export default function Page404() {
+const Page404 = () => {
     return (
         <div className="page-404">
             <h1 className="title">404 - Page Not Found</h1>
@@ -9,4 +9,6 @@ export default function Page404() {
             <Link to="/" className={"back-to-home"}>Back to Home</Link>
         </div>
     )
-}
+};
+  
+export default Page404;
